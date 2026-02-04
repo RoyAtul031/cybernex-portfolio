@@ -1,0 +1,6 @@
+- [x] Copy video file to public/assets/videos/globe.mp4
+- [x] Create CinematicVideo.tsx component with skip button and fallbacks
+- [x] Update App.tsx: add TERMINAL state, set sequence to VIDEO -> TERMINAL -> APP
+- [x] Set video to play normally (not reversed)
+- [x] Test the app by running the development server (now on port 3001)
+- [x] Verify video plays normally, then terminal appears, and after entering correct command, transitions to main portfolio

@@ -1,0 +1,7 @@
+{
+  "name": "CyberNex Portfolio",
+  "description": "A high-end, cinematic portfolio for a Web Developer, Gamer, and Cyber Security Expert featuring advanced Gemini AI capabilities including Veo video generation, image editing, and grounding.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
