@@ -9,7 +9,9 @@ const TerminalBoot: React.FC<TerminalBootProps> = ({ onComplete }) => {
     "Booting CyberNex OS v2.5...",
     "Initializing kernel...",
     "Loading security protocols...",
-    "IDENTITY VERIFICATION REQUIRED...",
+    "SYSTEM READY.",
+    " ",
+    "PLEASE TYPE 'ENTER' TO ACCESS THE PORTFOLIO...",
   ]);
   const [input, setInput] = useState('');
   const [isError, setIsError] = useState(false);
@@ -29,22 +31,22 @@ const TerminalBoot: React.FC<TerminalBootProps> = ({ onComplete }) => {
       const cmd = input.trim();
       setLines(prev => [...prev, `user@portfolio:~$ ${cmd}`]);
 
-      // Secret Key Check
-      if (cmd.toUpperCase() === "HI I AM ATUL") {
+      // Enter Command Check
+      if (cmd.toLowerCase() === "enter") {
         setLines(prev => [
           ...prev,
-          ">> IDENTITY CONFIRMED",
-          ">> WELCOME BOSS ITS YOUR PAGE ..",
-          ">> INITIATING MATRIX PROTOCOL..."
+          ">> ACCESS GRANTED",
+          ">> WELCOME TO ATUL'S PORTFOLIO",
+          ">> INITIATING INTERFACE..."
         ]);
         setInput('');
-        setTimeout(onComplete, 2500); // Slightly longer delay to read the message
+        setTimeout(onComplete, 2000);
       } else {
         setIsError(true);
         setLines(prev => [
           ...prev,
-          ">> ACCESS DENIED",
-          ">> INCORRECT IDENTITY. ACCESS RESTRICTED."
+          ">> INVALID COMMAND",
+          ">> PLEASE TYPE 'ENTER' TO PROCEED."
         ]);
         setInput('');
         setTimeout(() => setIsError(false), 200);
