@@ -15,8 +15,12 @@ const TerminalBoot: React.FC<TerminalBootProps> = ({ onComplete }) => {
   ]);
   const [input, setInput] = useState('');
   const [isError, setIsError] = useState(false);
+  const [countdown, setCountdown] = useState(3);
+  const [autoEntered, setAutoEntered] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
+  const countdownRef = useRef<any>(null);
+  const autoFireRef = useRef<any>(null);
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -26,8 +30,52 @@ const TerminalBoot: React.FC<TerminalBootProps> = ({ onComplete }) => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [lines]);
 
+  // Auto-enter timer: 3-second countdown
+  useEffect(() => {
+    if (autoEntered) return;
+
+    // Tick every second
+    countdownRef.current = setInterval(() => {
+      setCountdown(prev => {
+        if (prev <= 1) {
+          clearInterval(countdownRef.current);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    // Fire auto-enter after 3 seconds
+    autoFireRef.current = setTimeout(() => {
+      setAutoEntered(true);
+      setInput('enter');
+      setTimeout(() => {
+        setLines(prev => [
+          ...prev,
+          'user@portfolio:~$ enter',
+          '>> AUTO-ENTER TRIGGERED',
+          '>> ACCESS GRANTED',
+          ">> WELCOME TO ATUL'S PORTFOLIO",
+          '>> INITIATING INTERFACE...'
+        ]);
+        setInput('');
+        setTimeout(onComplete, 2000);
+      }, 400);
+    }, 3000);
+
+    return () => {
+      clearInterval(countdownRef.current);
+      clearTimeout(autoFireRef.current);
+    };
+  }, []);
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
+      // Cancel auto-enter timer since user acted
+      clearInterval(countdownRef.current);
+      clearTimeout(autoFireRef.current);
+      setAutoEntered(true);
+
       const cmd = input.trim();
       setLines(prev => [...prev, `user@portfolio:~$ ${cmd}`]);
 
@@ -86,7 +134,9 @@ const TerminalBoot: React.FC<TerminalBootProps> = ({ onComplete }) => {
         </div>
 
         <div className="absolute bottom-2 right-4 text-xs text-gray-500">
-          System Status: WAITING_FOR_INPUT
+          {autoEntered
+            ? 'System Status: ENTERING...'
+            : `System Status: WAITING_FOR_INPUT — Auto-entering in ${countdown}s`}
         </div>
       </div>
     </div>
