@@ -327,19 +327,20 @@ const App: React.FC = () => {
           <div className="project-card flip-card">
             <div className="flip-card-inner">
               <div className="flip-card-front">
-                <img src="/assets/images/project1.png" alt="MoodMap" />
-                <h3>MoodMap</h3>
-                <p>Built a location-based recommendation app using Maps & Places APIs with dynamic filtering and real-time user preferences.</p>
+                <img src="/assets/images/project1.png" alt="OmniSync ESG" />
+                <h3>OmniSync ESG</h3>
+                <p>Deterministic calculation & ERP delta sync engine for corporate GHG emissions and statutory ESG compliance.</p>
               </div>
               <div className="flip-card-back">
                 <div className="skills">
-                  <a href="#">HTML</a>
-                  <a href="#">CSS</a>
-                  <a href="#">JavaScript</a>
+                  <a href="#">Python</a>
+                  <a href="#">Django</a>
+                  <a href="#">PostgreSQL</a>
+                  <a href="#">Celery</a>
                 </div>
                 <div className="btns">
-                  <a href="https://github.com/RoyAtul031/Mood_Map" className="btn" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
-                  <a href="https://mood-map-eta.vercel.app/" className="btn" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i> Live Demo</a>
+                  <a href="https://github.com/RoyAtul031/erp-sync-calc-engine.git" className="btn" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                  <a href="https://erp-sync-calc-engine-9zgn.vercel.app/" className="btn" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
               </div>
             </div>
@@ -348,19 +349,20 @@ const App: React.FC = () => {
           <div className="project-card flip-card">
             <div className="flip-card-inner">
               <div className="flip-card-front">
-                <img src="/assets/images/project2.png" alt="EchoNote" />
-                <h3>EchoNote</h3>
-                <p>Developed a voice-driven Al tool that transcribes and summarizes spoken notes using speech recognition and LLMs.</p>
+                <img src="/assets/images/project2.png" alt="OmniESG Global" />
+                <h3>OmniESG Global</h3>
+                <p>Multi-tenant enterprise sustainability OS featuring cryptographic SHA-256 Merkle ledger and TCFD carbon pricing.</p>
               </div>
               <div className="flip-card-back">
                 <div className="skills">
-                  <a href="#">HTML</a>
-                  <a href="#">CSS</a>
-                  <a href="#">Bootstrap</a>
+                  <a href="#">React</a>
+                  <a href="#">TypeScript</a>
+                  <a href="#">Tailwind</a>
+                  <a href="#">Python</a>
                 </div>
                 <div className="btns">
-                  <a href="https://github.com/RoyAtul031/echonote" className="btn" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
-                  <a href="https://echonote.vercel.app/" className="btn" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i> Live Demo</a>
+                  <a href="https://github.com/RoyAtul031/OmniESG-Global.git" className="btn" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                  <a href="https://omniesgglobal-mocha.vercel.app/" className="btn" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
               </div>
             </div>
@@ -369,19 +371,20 @@ const App: React.FC = () => {
           <div className="project-card flip-card">
             <div className="flip-card-inner">
               <div className="flip-card-front">
-                <img src="/assets/images/project3.png" alt="FreshCheck" />
-                <h3>FreshCheck</h3>
-                <p>Built an image classification system using pre-trained vision models to assess food quality from user-uploaded images.</p>
+                <img src="/assets/images/project3.png" alt="SynthEthic" />
+                <h3>SynthEthic</h3>
+                <p>Decentralized privacy-preserving synthetic data generator utilizing Tabular DP-WGAN-GP and Go streamer microservice.</p>
               </div>
               <div className="flip-card-back">
                 <div className="skills">
-                  <a href="#">HTML</a>
-                  <a href="#">CSS</a>
-                  <a href="#">API</a>
+                  <a href="#">Python</a>
+                  <a href="#">PyTorch</a>
+                  <a href="#">Go</a>
+                  <a href="#">FastAPI</a>
                 </div>
                 <div className="btns">
-                  <a href="https://github.com/RoyAtul031/FreshCheck-" className="btn" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
-                  <a href="https://fresh-check-chi.vercel.app/" className="btn" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i> Live Demo</a>
+                  <a href="https://github.com/RoyAtul031/SynthEthic.git" className="btn" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                  <a href="https://synthethic-bice.vercel.app/" className="btn" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
               </div>
             </div>
